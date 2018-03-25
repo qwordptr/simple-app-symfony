@@ -17,7 +17,7 @@ esac
 docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
 docker build -f ./Dockerfile -t simple-app-symfony:$DOCKER_TAG . --no-cache
-
-docker push $DOCKER_USERNAME/memotime.backend:$DOCKER_TAG
+docker tag  simple-app-symfony:$DOCKER_TAG $DOCKER_USERNAME/simple-app-symfony:$DOCKER_TAG
+docker push $DOCKER_USERNAME/simple-app-symfony:$DOCKER_TAG
 
 echo "DONE!"
