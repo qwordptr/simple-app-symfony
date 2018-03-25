@@ -14,7 +14,7 @@ class HomeController
        $number = mt_rand(0, 100);
 
         return new Response(
-            '<html><body>Oh yeah...Lucky number: '.$number.'</body></html>'
+            '<html><body>Sranie w banie.Oh yeah...Lucky number: '.$number.'</body></html>'
         );
    }
 }
