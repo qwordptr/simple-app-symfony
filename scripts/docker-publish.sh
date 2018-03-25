@@ -14,7 +14,7 @@ case "$TRAVIS_BRANCH" in
      ;;
 esac
 
-docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 
 docker build -f ./Dockerfile -t simple-app-symfony:$DOCKER_TAG . --no-cache
 docker tag  simple-app-symfony:$DOCKER_TAG $DOCKER_USERNAME/simple-app-symfony:$DOCKER_TAG
