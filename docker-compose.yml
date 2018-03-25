@@ -1,0 +1,15 @@
+version: '3'
+services:
+  app:
+    image: app-symfony
+    ports: 
+      - "8080:80"
+    links:
+      - php 
+    volumes:
+      - ./.code:/var/www/html
+
+  php:
+    image: php:7.1-fpm
+    volumes:
+      - ./.code:/var/www/html  
